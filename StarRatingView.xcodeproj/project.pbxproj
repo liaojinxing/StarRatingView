@@ -19,6 +19,14 @@
 		C78228EC19160F1D00ACA111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D419160F1D00ACA111 /* UIKit.framework */; };
 		C78228F419160F1D00ACA111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78228F219160F1D00ACA111 /* InfoPlist.strings */; };
 		C78228F619160F1D00ACA111 /* StarRatingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78228F519160F1D00ACA111 /* StarRatingViewTests.m */; };
+		C782290619160F7300ACA111 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290519160F7300ACA111 /* RatingView.m */; };
+		C782290F1916106500ACA111 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290E1916106500ACA111 /* ExampleViewController.m */; };
+		C78229161916128B00ACA111 /* ic_starred.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229101916128B00ACA111 /* ic_starred.png */; };
+		C78229171916128B00ACA111 /* ic_starredept.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229111916128B00ACA111 /* ic_starredept.png */; };
+		C78229181916128B00ACA111 /* ic_starredhalf.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229121916128B00ACA111 /* ic_starredhalf.png */; };
+		C78229191916128B00ACA111 /* ic_starwhite.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229131916128B00ACA111 /* ic_starwhite.png */; };
+		C782291A1916128B00ACA111 /* ic_starwhiteept.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229141916128B00ACA111 /* ic_starwhiteept.png */; };
+		C782291B1916128B00ACA111 /* ic_starwhitehalf.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229151916128B00ACA111 /* ic_starwhitehalf.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,16 @@
 		C78228F119160F1D00ACA111 /* StarRatingViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StarRatingViewTests-Info.plist"; sourceTree = "<group>"; };
 		C78228F319160F1D00ACA111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C78228F519160F1D00ACA111 /* StarRatingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRatingViewTests.m; sourceTree = "<group>"; };
+		C782290419160F7300ACA111 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingView.h; path = Source/View/RatingView.h; sourceTree = "<group>"; };
+		C782290519160F7300ACA111 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingView.m; path = Source/View/RatingView.m; sourceTree = "<group>"; };
+		C782290D1916106500ACA111 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleViewController.h; path = Source/Controllers/ExampleViewController.h; sourceTree = "<group>"; };
+		C782290E1916106500ACA111 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleViewController.m; path = Source/Controllers/ExampleViewController.m; sourceTree = "<group>"; };
+		C78229101916128B00ACA111 /* ic_starred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starred.png; path = Resource/ic_starred.png; sourceTree = "<group>"; };
+		C78229111916128B00ACA111 /* ic_starredept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starredept.png; path = Resource/ic_starredept.png; sourceTree = "<group>"; };
+		C78229121916128B00ACA111 /* ic_starredhalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starredhalf.png; path = Resource/ic_starredhalf.png; sourceTree = "<group>"; };
+		C78229131916128B00ACA111 /* ic_starwhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starwhite.png; path = Resource/ic_starwhite.png; sourceTree = "<group>"; };
+		C78229141916128B00ACA111 /* ic_starwhiteept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starwhiteept.png; path = Resource/ic_starwhiteept.png; sourceTree = "<group>"; };
+		C78229151916128B00ACA111 /* ic_starwhitehalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starwhitehalf.png; path = Resource/ic_starwhitehalf.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +125,8 @@
 		C78228D619160F1D00ACA111 /* StarRatingView */ = {
 			isa = PBXGroup;
 			children = (
-				C78228DF19160F1D00ACA111 /* AppDelegate.h */,
-				C78228E019160F1D00ACA111 /* AppDelegate.m */,
+				C782290019160F3000ACA111 /* Resource */,
+				C78228FF19160F2600ACA111 /* Source */,
 				C78228E219160F1D00ACA111 /* Images.xcassets */,
 				C78228D719160F1D00ACA111 /* Supporting Files */,
 			);
@@ -142,6 +160,56 @@
 				C78228F219160F1D00ACA111 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C78228FF19160F2600ACA111 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C782290319160F4E00ACA111 /* Controllers */,
+				C782290219160F4A00ACA111 /* View */,
+				C782290119160F3600ACA111 /* App */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		C782290019160F3000ACA111 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C78229101916128B00ACA111 /* ic_starred.png */,
+				C78229111916128B00ACA111 /* ic_starredept.png */,
+				C78229121916128B00ACA111 /* ic_starredhalf.png */,
+				C78229131916128B00ACA111 /* ic_starwhite.png */,
+				C78229141916128B00ACA111 /* ic_starwhiteept.png */,
+				C78229151916128B00ACA111 /* ic_starwhitehalf.png */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		C782290119160F3600ACA111 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C78228DF19160F1D00ACA111 /* AppDelegate.h */,
+				C78228E019160F1D00ACA111 /* AppDelegate.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		C782290219160F4A00ACA111 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C782290419160F7300ACA111 /* RatingView.h */,
+				C782290519160F7300ACA111 /* RatingView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C782290319160F4E00ACA111 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C782290D1916106500ACA111 /* ExampleViewController.h */,
+				C782290E1916106500ACA111 /* ExampleViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,8 +287,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C782291B1916128B00ACA111 /* ic_starwhitehalf.png in Resources */,
+				C78229181916128B00ACA111 /* ic_starredhalf.png in Resources */,
+				C782291A1916128B00ACA111 /* ic_starwhiteept.png in Resources */,
+				C78229161916128B00ACA111 /* ic_starred.png in Resources */,
+				C78229171916128B00ACA111 /* ic_starredept.png in Resources */,
 				C78228DB19160F1D00ACA111 /* InfoPlist.strings in Resources */,
 				C78228E319160F1D00ACA111 /* Images.xcassets in Resources */,
+				C78229191916128B00ACA111 /* ic_starwhite.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +313,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C782290619160F7300ACA111 /* RatingView.m in Sources */,
+				C782290F1916106500ACA111 /* ExampleViewController.m in Sources */,
 				C78228E119160F1D00ACA111 /* AppDelegate.m in Sources */,
 				C78228DD19160F1D00ACA111 /* main.m in Sources */,
 			);
