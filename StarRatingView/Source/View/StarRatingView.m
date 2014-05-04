@@ -6,18 +6,18 @@
 //  Copyright (c) 2014年 jinxing. All rights reserved.
 //
 
-#import "RatingView.h"
+#import "StarRatingView.h"
 
 static const CGFloat kDefaultStarWidth = 16.0f;
 
-@interface RatingView()
+@interface StarRatingView()
 
 @property (nonatomic, strong) NSMutableArray *starButtons;
 
 @end
 
 
-@implementation RatingView
+@implementation StarRatingView
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -34,12 +34,6 @@ static const CGFloat kDefaultStarWidth = 16.0f;
       [button setFrame:frame];
       [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
       button.tag = i;
-      
-      [button  addTarget:self
-                  action:@selector(rate:)
-        forControlEvents:UIControlEventTouchUpInside];
-      [button setUserInteractionEnabled:YES];
-      
       [self addSubview:button];
       [_starButtons addObject:button];
     }

@@ -7,7 +7,7 @@
 //
 
 #import "ExampleViewController.h"
-#import "RatingView.h"
+#import "StarRatingView.h"
 
 @interface ExampleViewController ()
 
@@ -17,13 +17,18 @@
 
 - (void)viewDidLoad
 {
-  [self.view setBackgroundColor:[UIColor blueColor]];
   [super viewDidLoad];
 
-  RatingView *ratingView = [[RatingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 20)];
-  ratingView.rateEnabled = YES;
-  ratingView.starWidth = 50.0f;
+  StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 20)];
+  //ratingView.rateEnabled = YES;
+  //ratingView.starWidth = 20.0f;
+  // set image
+  /*
   ratingView.fullImage = @"ic_starwhite.png";
+  ratingView.halfImage = @"ic_starwhitehalf.png";
+  ratingView.emptyImage = @"ic_starwhiteept";
+   */
+  
   [ratingView displayRating:4.0f];
   [self.view addSubview:ratingView];
 }

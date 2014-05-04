@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RatingView : UIView
+@interface StarRatingView : UIView
 
 - (void)displayRating:(float)rating;
 - (id)initWithFrame:(CGRect)frame rateEnabled:(BOOL)rateEnabled;

@@ -19,7 +19,7 @@
 		C78228EC19160F1D00ACA111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D419160F1D00ACA111 /* UIKit.framework */; };
 		C78228F419160F1D00ACA111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78228F219160F1D00ACA111 /* InfoPlist.strings */; };
 		C78228F619160F1D00ACA111 /* StarRatingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78228F519160F1D00ACA111 /* StarRatingViewTests.m */; };
-		C782290619160F7300ACA111 /* RatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290519160F7300ACA111 /* RatingView.m */; };
+		C782290619160F7300ACA111 /* StarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290519160F7300ACA111 /* StarRatingView.m */; };
 		C782290F1916106500ACA111 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290E1916106500ACA111 /* ExampleViewController.m */; };
 		C78229161916128B00ACA111 /* ic_starred.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229101916128B00ACA111 /* ic_starred.png */; };
 		C78229171916128B00ACA111 /* ic_starredept.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229111916128B00ACA111 /* ic_starredept.png */; };
@@ -56,8 +56,8 @@
 		C78228F119160F1D00ACA111 /* StarRatingViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StarRatingViewTests-Info.plist"; sourceTree = "<group>"; };
 		C78228F319160F1D00ACA111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C78228F519160F1D00ACA111 /* StarRatingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRatingViewTests.m; sourceTree = "<group>"; };
-		C782290419160F7300ACA111 /* RatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RatingView.h; path = Source/View/RatingView.h; sourceTree = "<group>"; };
-		C782290519160F7300ACA111 /* RatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RatingView.m; path = Source/View/RatingView.m; sourceTree = "<group>"; };
+		C782290419160F7300ACA111 /* StarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarRatingView.h; path = Source/View/StarRatingView.h; sourceTree = "<group>"; };
+		C782290519160F7300ACA111 /* StarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarRatingView.m; path = Source/View/StarRatingView.m; sourceTree = "<group>"; };
 		C782290D1916106500ACA111 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleViewController.h; path = Source/Controllers/ExampleViewController.h; sourceTree = "<group>"; };
 		C782290E1916106500ACA111 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleViewController.m; path = Source/Controllers/ExampleViewController.m; sourceTree = "<group>"; };
 		C78229101916128B00ACA111 /* ic_starred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starred.png; path = Resource/ic_starred.png; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 		C782290219160F4A00ACA111 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C782290419160F7300ACA111 /* RatingView.h */,
-				C782290519160F7300ACA111 /* RatingView.m */,
+				C782290419160F7300ACA111 /* StarRatingView.h */,
+				C782290519160F7300ACA111 /* StarRatingView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -313,7 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C782290619160F7300ACA111 /* RatingView.m in Sources */,
+				C782290619160F7300ACA111 /* StarRatingView.m in Sources */,
 				C782290F1916106500ACA111 /* ExampleViewController.m in Sources */,
 				C78228E119160F1D00ACA111 /* AppDelegate.m in Sources */,
 				C78228DD19160F1D00ACA111 /* main.m in Sources */,
@@ -515,6 +515,7 @@
 				C78228FB19160F1D00ACA111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C78228FC19160F1D00ACA111 /* Build configuration list for PBXNativeTarget "StarRatingViewTests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +524,7 @@
 				C78228FE19160F1D00ACA111 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
