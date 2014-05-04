@@ -23,7 +23,7 @@ StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(0,
 [ratingView displayRating:4.0f];    // rate range:[0,5]
 ```
 
-Configure the view if you needed:
+Configure the view if you need it:
 ```
 ratingView.rateEnabled = YES;
 ratingView.starWidth = 20.0f;
