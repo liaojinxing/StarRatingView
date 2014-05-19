@@ -73,49 +73,50 @@ static const CGFloat kDefaultStarWidth = 16.0f;
 
 - (void)rate:(id)sender
 {
-  UIButton *button = (UIButton *)sender;
-  [self displayRating:button.tag + 1];
+    UIButton *button = (UIButton *)sender;
+    [self setRating:button.tag + 1];
 }
 
-- (void)displayRating:(float)rating
+- (void)setRating:(CGFloat)rating
 {
-  UIImage *starFull, *starHalf, *starEmpty;
-  float ratingStars = rating;
-
-  if (self.fullImage) {
-    starFull = [UIImage imageNamed:self.fullImage];
-  } else {
-    starFull = [UIImage imageNamed:@"ic_starred.png"];
-  }
-  
-  if (self.halfImage) {
-    starHalf = [UIImage imageNamed:self.halfImage];
-  } else {
-    starHalf = [UIImage imageNamed:@"ic_starredhalf.png"];
-  }
-  
-  if (self.emptyImage) {
-    starEmpty = [UIImage imageNamed:self.emptyImage];
-  } else {
-    starEmpty = [UIImage imageNamed:@"ic_starredept.png"];
-  }
-  
-  int fullStars = floor(ratingStars);
-  for (int i = 0; i < fullStars; i++) {
-    UIButton *button = [_starButtons objectAtIndex:i];
-    [button setImage:starFull forState:UIControlStateNormal];
-  }
-  if (self.rateEnabled) {
-    for (int i = fullStars; i < [_starButtons count]; i++) {
-      UIButton *button = [_starButtons objectAtIndex:i];
-      [button setImage:starEmpty forState:UIControlStateNormal];
+    _rating = rating;
+    
+    UIImage *starFull, *starHalf, *starEmpty;
+    
+    if (self.fullImage) {
+        starFull = [UIImage imageNamed:self.fullImage];
+    } else {
+        starFull = [UIImage imageNamed:@"ic_starred.png"];
     }
     
-    if (ratingStars - fullStars >= 0.5) {
-      UIButton *button = [_starButtons objectAtIndex:fullStars];
-      [button setImage:starHalf forState:UIControlStateNormal];
+    if (self.halfImage) {
+        starHalf = [UIImage imageNamed:self.halfImage];
+    } else {
+        starHalf = [UIImage imageNamed:@"ic_starredhalf.png"];
     }
-  }
+    
+    if (self.emptyImage) {
+        starEmpty = [UIImage imageNamed:self.emptyImage];
+    } else {
+        starEmpty = [UIImage imageNamed:@"ic_starredept.png"];
+    }
+    
+    int fullStars = floor(rating);
+    for (int i = 0; i < fullStars; i++) {
+        UIButton *button = [_starButtons objectAtIndex:i];
+        [button setImage:starFull forState:UIControlStateNormal];
+    }
+    if (self.rateEnabled) {
+        for (int i = fullStars; i < [_starButtons count]; i++) {
+            UIButton *button = [_starButtons objectAtIndex:i];
+            [button setImage:starEmpty forState:UIControlStateNormal];
+        }
+        
+        if (rating - fullStars >= 0.5) {
+            UIButton *button = [_starButtons objectAtIndex:fullStars];
+            [button setImage:starHalf forState:UIControlStateNormal];
+        }
+    }
 }
 
 @end

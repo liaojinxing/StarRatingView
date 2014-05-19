@@ -6,29 +6,24 @@
 //  Copyright (c) 2014年 jinxing. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+SpecBegin(StarRatingView)
 
-@interface StarRatingViewTests : XCTestCase
+__block StarRatingView* view;
 
-@end
+beforeEach(^{
+    view = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+});
 
-@implementation StarRatingViewTests
+describe(@"rating", ^{
+    it(@"defaults to zero", ^{
+        expect(view.rating).to.equal(0);
+    });
+    
+    it(@"can be set", ^{
+        view.rating = 3.5f;
+        expect(view.rating).to.equal(3.5f);
+    });
+});
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+SpecEnd
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
-
-@end

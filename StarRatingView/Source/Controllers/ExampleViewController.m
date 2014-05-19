@@ -30,16 +30,8 @@
   ratingView.emptyImage = @"ic_starwhiteept";
   
   
-  [ratingView displayRating:4.0f];
+  ratingView.rating = 4.0f;
   [self.view addSubview:ratingView];
 }
-
-- (void)didReceiveMemoryWarning
-{
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
-}
-
-
 
 @end

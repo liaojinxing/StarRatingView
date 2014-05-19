@@ -1,0 +1,20 @@
+PODS:
+  - Expecta (0.2.4)
+  - Specta (0.2.1)
+  - StarRatingView (1.0.0)
+
+DEPENDENCIES:
+  - Expecta (~> 0.2.3)
+  - Specta (~> 0.2.1)
+  - StarRatingView (from `StarRatingView.podspec`)
+
+EXTERNAL SOURCES:
+  StarRatingView:
+    :path: StarRatingView.podspec
+
+SPEC CHECKSUMS:
+  Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
+  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
+  StarRatingView: 0c998c18e8bc684ed756fd07b43e357eac6c2b3b
+
+COCOAPODS: 0.32.1
