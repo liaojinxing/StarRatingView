@@ -1,10 +1,16 @@
 PODS:
   - Expecta (0.2.4)
+  - EXPMatchers+FBSnapshotTest (1.1.0):
+    - Expecta
+    - FBSnapshotTestCase
+  - FBSnapshotTestCase (1.1)
   - Specta (0.2.1)
   - StarRatingView (1.0.0)
 
 DEPENDENCIES:
   - Expecta (~> 0.2.3)
+  - EXPMatchers+FBSnapshotTest (= 1.1)
+  - FBSnapshotTestCase (= 1.1)
   - Specta (~> 0.2.1)
   - StarRatingView (from `StarRatingView.podspec`)
 
@@ -14,6 +20,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
+  EXPMatchers+FBSnapshotTest: cf5bf37817741d89bd3a3ff80be7ff417692ab7d
+  FBSnapshotTestCase: 188c80bfcb72e744eb0b99d45989d12687c40cf8
   Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
   StarRatingView: 0c998c18e8bc684ed756fd07b43e357eac6c2b3b
 

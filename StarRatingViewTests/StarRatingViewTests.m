@@ -23,6 +23,30 @@ describe(@"rating", ^{
         view.rating = 3.5f;
         expect(view.rating).to.equal(3.5f);
     });
+    
+    it(@"displays no stars", ^{
+        expect(view).to.haveValidSnapshotNamed(@"noStars");
+    });
+
+    it(@"displays half a star", ^{
+        view.rating = 0.5f;
+        expect(view).to.haveValidSnapshotNamed(@"halfStar");
+    });
+
+    it(@"displays one star", ^{
+        view.rating = 1.0f;
+        expect(view).to.haveValidSnapshotNamed(@"oneStar");
+    });
+
+    it(@"displays five stars", ^{
+        view.rating = 5.0f;
+        expect(view).to.haveValidSnapshotNamed(@"fiveStars");
+    });
+
+    it(@"displays half stars", ^{
+        view.rating = 3.5f;
+        expect(view).to.haveValidSnapshotNamed(@"threePointFiveStars");
+    });
 });
 
 SpecEnd

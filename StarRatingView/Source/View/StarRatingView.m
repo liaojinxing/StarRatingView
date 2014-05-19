@@ -106,16 +106,15 @@ static const CGFloat kDefaultStarWidth = 16.0f;
         UIButton *button = [_starButtons objectAtIndex:i];
         [button setImage:starFull forState:UIControlStateNormal];
     }
-    if (self.rateEnabled) {
-        for (int i = fullStars; i < [_starButtons count]; i++) {
-            UIButton *button = [_starButtons objectAtIndex:i];
-            [button setImage:starEmpty forState:UIControlStateNormal];
-        }
-        
-        if (rating - fullStars >= 0.5) {
-            UIButton *button = [_starButtons objectAtIndex:fullStars];
-            [button setImage:starHalf forState:UIControlStateNormal];
-        }
+    
+    if (rating - fullStars >= 0.5) {
+        UIButton *button = [_starButtons objectAtIndex:fullStars];
+        [button setImage:starHalf forState:UIControlStateNormal];
+    }
+    
+    for (int i = ceil(rating); i < 5; i++) {
+        UIButton *button = [_starButtons objectAtIndex:i];
+        [button setImage:starEmpty forState:UIControlStateNormal];
     }
 }
 
