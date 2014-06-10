@@ -6,29 +6,48 @@
 //  Copyright (c) 2014年 jinxing. All rights reserved.
 //
 
-#import <XCTest/XCTest.h>
+SpecBegin(StarRatingView)
 
-@interface StarRatingViewTests : XCTestCase
+__block StarRatingView* view;
 
-@end
+beforeEach(^{
+    view = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+});
 
-@implementation StarRatingViewTests
+describe(@"rating", ^{
+    it(@"defaults to zero", ^{
+        expect(view.rating).to.equal(0);
+    });
+    
+    it(@"can be set", ^{
+        view.rating = 3.5f;
+        expect(view.rating).to.equal(3.5f);
+    });
+    
+    it(@"displays no stars", ^{
+        expect(view).to.haveValidSnapshotNamed(@"noStars");
+    });
 
-- (void)setUp
-{
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
-}
+    it(@"displays half a star", ^{
+        view.rating = 0.5f;
+        expect(view).to.haveValidSnapshotNamed(@"halfStar");
+    });
 
-- (void)tearDown
-{
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
+    it(@"displays one star", ^{
+        view.rating = 1.0f;
+        expect(view).to.haveValidSnapshotNamed(@"oneStar");
+    });
 
-- (void)testExample
-{
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
-}
+    it(@"displays five stars", ^{
+        view.rating = 5.0f;
+        expect(view).to.haveValidSnapshotNamed(@"fiveStars");
+    });
 
-@end
+    it(@"displays half stars", ^{
+        view.rating = 3.5f;
+        expect(view).to.haveValidSnapshotNamed(@"threePointFiveStars");
+    });
+});
+
+SpecEnd
+

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05EC56951E1A4A8BAA8C3552 /* libPods-StarRatingViewTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 444CF95EB5A24E6787A59A0D /* libPods-StarRatingViewTests.a */; };
+		5180E3625CD24F84AF4BBFC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0928A47389C74410A06AA3AC /* libPods.a */; };
 		C78228D119160F1D00ACA111 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D019160F1D00ACA111 /* Foundation.framework */; };
 		C78228D319160F1D00ACA111 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D219160F1D00ACA111 /* CoreGraphics.framework */; };
 		C78228D519160F1D00ACA111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D419160F1D00ACA111 /* UIKit.framework */; };
@@ -19,7 +21,6 @@
 		C78228EC19160F1D00ACA111 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C78228D419160F1D00ACA111 /* UIKit.framework */; };
 		C78228F419160F1D00ACA111 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C78228F219160F1D00ACA111 /* InfoPlist.strings */; };
 		C78228F619160F1D00ACA111 /* StarRatingViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C78228F519160F1D00ACA111 /* StarRatingViewTests.m */; };
-		C782290619160F7300ACA111 /* StarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290519160F7300ACA111 /* StarRatingView.m */; };
 		C782290F1916106500ACA111 /* ExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C782290E1916106500ACA111 /* ExampleViewController.m */; };
 		C78229161916128B00ACA111 /* ic_starred.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229101916128B00ACA111 /* ic_starred.png */; };
 		C78229171916128B00ACA111 /* ic_starredept.png in Resources */ = {isa = PBXBuildFile; fileRef = C78229111916128B00ACA111 /* ic_starredept.png */; };
@@ -40,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0928A47389C74410A06AA3AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C6DBF9E192AA47400197F6D /* StarRatingViewTests-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "StarRatingViewTests-Prefix.pch"; sourceTree = "<group>"; };
+		444CF95EB5A24E6787A59A0D /* libPods-StarRatingViewTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StarRatingViewTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7CCB5A8E74324B85B5EB88D6 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		90D65CDE801D491CB63AE3D1 /* Pods-StarRatingViewTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarRatingViewTests.xcconfig"; path = "Pods/Pods-StarRatingViewTests.xcconfig"; sourceTree = "<group>"; };
 		C78228CD19160F1D00ACA111 /* StarRatingView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarRatingView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C78228D019160F1D00ACA111 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C78228D219160F1D00ACA111 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -56,8 +62,6 @@
 		C78228F119160F1D00ACA111 /* StarRatingViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StarRatingViewTests-Info.plist"; sourceTree = "<group>"; };
 		C78228F319160F1D00ACA111 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C78228F519160F1D00ACA111 /* StarRatingViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StarRatingViewTests.m; sourceTree = "<group>"; };
-		C782290419160F7300ACA111 /* StarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StarRatingView.h; path = Source/View/StarRatingView.h; sourceTree = "<group>"; };
-		C782290519160F7300ACA111 /* StarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StarRatingView.m; path = Source/View/StarRatingView.m; sourceTree = "<group>"; };
 		C782290D1916106500ACA111 /* ExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleViewController.h; path = Source/Controllers/ExampleViewController.h; sourceTree = "<group>"; };
 		C782290E1916106500ACA111 /* ExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleViewController.m; path = Source/Controllers/ExampleViewController.m; sourceTree = "<group>"; };
 		C78229101916128B00ACA111 /* ic_starred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ic_starred.png; path = Resource/ic_starred.png; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 				C78228D319160F1D00ACA111 /* CoreGraphics.framework in Frameworks */,
 				C78228D519160F1D00ACA111 /* UIKit.framework in Frameworks */,
 				C78228D119160F1D00ACA111 /* Foundation.framework in Frameworks */,
+				5180E3625CD24F84AF4BBFC7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,7 @@
 				C78228EA19160F1D00ACA111 /* XCTest.framework in Frameworks */,
 				C78228EC19160F1D00ACA111 /* UIKit.framework in Frameworks */,
 				C78228EB19160F1D00ACA111 /* Foundation.framework in Frameworks */,
+				05EC56951E1A4A8BAA8C3552 /* libPods-StarRatingViewTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +105,8 @@
 				C78228EF19160F1D00ACA111 /* StarRatingViewTests */,
 				C78228CF19160F1D00ACA111 /* Frameworks */,
 				C78228CE19160F1D00ACA111 /* Products */,
+				7CCB5A8E74324B85B5EB88D6 /* Pods.xcconfig */,
+				90D65CDE801D491CB63AE3D1 /* Pods-StarRatingViewTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +126,8 @@
 				C78228D219160F1D00ACA111 /* CoreGraphics.framework */,
 				C78228D419160F1D00ACA111 /* UIKit.framework */,
 				C78228E919160F1D00ACA111 /* XCTest.framework */,
+				0928A47389C74410A06AA3AC /* libPods.a */,
+				444CF95EB5A24E6787A59A0D /* libPods-StarRatingViewTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 			children = (
 				C78228F119160F1D00ACA111 /* StarRatingViewTests-Info.plist */,
 				C78228F219160F1D00ACA111 /* InfoPlist.strings */,
+				3C6DBF9E192AA47400197F6D /* StarRatingViewTests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -166,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				C782290319160F4E00ACA111 /* Controllers */,
-				C782290219160F4A00ACA111 /* View */,
 				C782290119160F3600ACA111 /* App */,
 			);
 			name = Source;
@@ -194,15 +204,6 @@
 			name = App;
 			sourceTree = "<group>";
 		};
-		C782290219160F4A00ACA111 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C782290419160F7300ACA111 /* StarRatingView.h */,
-				C782290519160F7300ACA111 /* StarRatingView.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
 		C782290319160F4E00ACA111 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,9 +220,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C78228F919160F1D00ACA111 /* Build configuration list for PBXNativeTarget "StarRatingView" */;
 			buildPhases = (
+				2B2A59EBA7AC4E508AD6AD55 /* Check Pods Manifest.lock */,
 				C78228C919160F1D00ACA111 /* Sources */,
 				C78228CA19160F1D00ACA111 /* Frameworks */,
 				C78228CB19160F1D00ACA111 /* Resources */,
+				0F20F179902A40B68F909796 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,9 +239,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C78228FC19160F1D00ACA111 /* Build configuration list for PBXNativeTarget "StarRatingViewTests" */;
 			buildPhases = (
+				98F0632F1D3E4056B46BD90E /* Check Pods Manifest.lock */,
 				C78228E419160F1D00ACA111 /* Sources */,
 				C78228E519160F1D00ACA111 /* Frameworks */,
 				C78228E619160F1D00ACA111 /* Resources */,
+				921251DC52554632B3D9F39C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,12 +313,74 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F20F179902A40B68F909796 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B2A59EBA7AC4E508AD6AD55 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		921251DC52554632B3D9F39C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-StarRatingViewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98F0632F1D3E4056B46BD90E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C78228C919160F1D00ACA111 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C782290619160F7300ACA111 /* StarRatingView.m in Sources */,
 				C782290F1916106500ACA111 /* ExampleViewController.m in Sources */,
 				C78228E119160F1D00ACA111 /* AppDelegate.m in Sources */,
 				C78228DD19160F1D00ACA111 /* main.m in Sources */,
@@ -432,6 +499,7 @@
 		};
 		C78228FA19160F1D00ACA111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CCB5A8E74324B85B5EB88D6 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -445,6 +513,7 @@
 		};
 		C78228FB19160F1D00ACA111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CCB5A8E74324B85B5EB88D6 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -458,6 +527,7 @@
 		};
 		C78228FD19160F1D00ACA111 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D65CDE801D491CB63AE3D1 /* Pods-StarRatingViewTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StarRatingView.app/StarRatingView";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -466,7 +536,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StarRatingView/StarRatingView-Prefix.pch";
+				GCC_PREFIX_HEADER = "StarRatingViewTests/StarRatingViewTests-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -480,6 +550,7 @@
 		};
 		C78228FE19160F1D00ACA111 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90D65CDE801D491CB63AE3D1 /* Pods-StarRatingViewTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StarRatingView.app/StarRatingView";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -488,7 +559,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "StarRatingView/StarRatingView-Prefix.pch";
+				GCC_PREFIX_HEADER = "StarRatingViewTests/StarRatingViewTests-Prefix.pch";
 				INFOPLIST_FILE = "StarRatingViewTests/StarRatingViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";

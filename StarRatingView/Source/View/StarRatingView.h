@@ -10,7 +10,6 @@
 
 @interface StarRatingView : UIView
 
-- (void)displayRating:(float)rating;
 - (id)initWithFrame:(CGRect)frame rateEnabled:(BOOL)rateEnabled;
 
 // star configuration
@@ -21,5 +20,5 @@
 @property (nonatomic, strong) NSString *fullImage;
 @property (nonatomic, strong) NSString *halfImage;
 @property (nonatomic, strong) NSString *emptyImage;
-
+@property (nonatomic, assign) CGFloat rating;
 @end

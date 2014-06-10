@@ -1,6 +1,8 @@
-
 StarRatingView
 ================
+
+[![Build Status](https://travis-ci.org/dblock/StarRatingView.svg)](https://travis-ci.org/dblock/StarRatingView)
+
 Star rating view, often used in vote. Easy to use, and flexible configurations.
 
 ![StarRating1](ScreenShot/rating1.png)
@@ -9,7 +11,7 @@ Star rating view, often used in vote. Easy to use, and flexible configurations.
 
 Installation
 -------------------------
-- Grab the source file into your project. 
+- Grab the source file into your project.
 - Or use cocoapods. Here is an example of your podfile:
 
 ```
@@ -20,7 +22,7 @@ Usage
 -------
 ```
 StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 20)];
-[ratingView displayRating:4.0f];    // rate range:[0,5]
+ratingView.rating = 4.0f;    // rate range:[0,5]
 ```
 
 Configure the view if you need it:
