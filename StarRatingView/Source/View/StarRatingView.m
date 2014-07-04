@@ -10,7 +10,7 @@
 
 static const CGFloat kDefaultStarWidth = 16.0f;
 
-@interface StarRatingView()
+@interface StarRatingView ()
 
 @property (nonatomic, strong) NSMutableArray *starButtons;
 
@@ -37,7 +37,7 @@ static const CGFloat kDefaultStarWidth = 16.0f;
       [self addSubview:button];
       [_starButtons addObject:button];
     }
-    
+
     self.starWidth = kDefaultStarWidth;
     self.rateEnabled = rateEnabled;
   }
@@ -66,56 +66,57 @@ static const CGFloat kDefaultStarWidth = 16.0f;
       [button  addTarget:self
                   action:@selector(rate:)
         forControlEvents:UIControlEventTouchUpInside];
-    } 
+    }
   }
 }
 
-
 - (void)rate:(id)sender
 {
-    UIButton *button = (UIButton *)sender;
-    [self setRating:button.tag + 1];
+  UIButton *button = (UIButton *)sender;
+  [self setRating:button.tag + 1];
 }
 
 - (void)setRating:(CGFloat)rating
 {
-    _rating = rating;
-    
-    UIImage *starFull, *starHalf, *starEmpty;
-    
-    if (self.fullImage) {
-        starFull = [UIImage imageNamed:self.fullImage];
-    } else {
-        starFull = [UIImage imageNamed:@"ic_starred.png"];
-    }
-    
-    if (self.halfImage) {
-        starHalf = [UIImage imageNamed:self.halfImage];
-    } else {
-        starHalf = [UIImage imageNamed:@"ic_starredhalf.png"];
-    }
-    
-    if (self.emptyImage) {
-        starEmpty = [UIImage imageNamed:self.emptyImage];
-    } else {
-        starEmpty = [UIImage imageNamed:@"ic_starredept.png"];
-    }
-    
-    int fullStars = floor(rating);
-    for (int i = 0; i < fullStars; i++) {
-        UIButton *button = [_starButtons objectAtIndex:i];
-        [button setImage:starFull forState:UIControlStateNormal];
-    }
-    
-    if (rating - fullStars >= 0.5) {
-        UIButton *button = [_starButtons objectAtIndex:fullStars];
-        [button setImage:starHalf forState:UIControlStateNormal];
-    }
-    
-    for (int i = ceil(rating); i < 5; i++) {
-        UIButton *button = [_starButtons objectAtIndex:i];
-        [button setImage:starEmpty forState:UIControlStateNormal];
-    }
+  _rating = rating;
+
+  UIImage *starFull, *starHalf, *starEmpty;
+
+  if (self.fullImage) {
+    starFull = [UIImage imageNamed:self.fullImage];
+  } else {
+    starFull = [UIImage imageNamed:@"ic_starred.png"];
+  }
+
+  if (self.halfImage) {
+    starHalf = [UIImage imageNamed:self.halfImage];
+  } else {
+    starHalf = [UIImage imageNamed:@"ic_starredhalf.png"];
+  }
+
+  if (self.emptyImage) {
+    starEmpty = [UIImage imageNamed:self.emptyImage];
+  } else {
+    starEmpty = [UIImage imageNamed:@"ic_starredept.png"];
+  }
+
+  int fullStars = floor(rating);
+  int i;
+  for (i = 0; i < fullStars; i++) {
+    UIButton *button = [_starButtons objectAtIndex:i];
+    [button setImage:starFull forState:UIControlStateNormal];
+  }
+
+  if (rating - fullStars >= 0.5) {
+    UIButton *button = [_starButtons objectAtIndex:fullStars];
+    [button setImage:starHalf forState:UIControlStateNormal];
+    i++;
+  }
+
+  for (; i < 5; i++) {
+    UIButton *button = [_starButtons objectAtIndex:i];
+    [button setImage:starEmpty forState:UIControlStateNormal];
+  }
 }
 
 @end
