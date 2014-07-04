@@ -19,10 +19,10 @@ EXTERNAL SOURCES:
     :path: StarRatingView.podspec
 
 SPEC CHECKSUMS:
-  Expecta: 5c147dedfea5fbcf773995f7e65020abcc936ce5
-  EXPMatchers+FBSnapshotTest: cf5bf37817741d89bd3a3ff80be7ff417692ab7d
-  FBSnapshotTestCase: 188c80bfcb72e744eb0b99d45989d12687c40cf8
-  Specta: 2d06220591110c6d9757d8be8ecf8e63aa40dc2a
+  Expecta: 112bcafa2304ee0f3c5e586505f24555a47b25d5
+  EXPMatchers+FBSnapshotTest: fcc428d6a5d4410c1711aeda4456c9c5e93f98d3
+  FBSnapshotTestCase: 9053afee1d66b4c7c313fcb0ae582a5e47bea9d0
+  Specta: 9141310f46b1f68b676650ff2854e1ed0b74163a
   StarRatingView: 0c998c18e8bc684ed756fd07b43e357eac6c2b3b
 
-COCOAPODS: 0.32.1
+COCOAPODS: 0.33.1

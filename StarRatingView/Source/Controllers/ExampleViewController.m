@@ -21,10 +21,9 @@
   [self.view setBackgroundColor:[UIColor grayColor]];
   
   StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 50, 20)];
-  ratingView.rateEnabled = NO;
-  //ratingView.starWidth = 20.0f;
+  ratingView.rateEnabled = YES;
+  ratingView.starWidth = 30.0f;
   // set image
-  
   ratingView.fullImage = @"ic_starwhite.png";
   ratingView.halfImage = @"ic_starwhitehalf.png";
   ratingView.emptyImage = @"ic_starwhiteept";
