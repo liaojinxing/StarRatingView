@@ -21,19 +21,18 @@ pod 'StarRatingView'
 Usage
 -------
 ```
-StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 20)];
+StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(0, 100, self.view.frame.size.width, 20) configuration:configuration];
 ratingView.rating = 4.0f;    // rate range:[0,5]
 ```
 
 Configure the view if you need it:
 ```
-ratingView.rateEnabled = YES;
-ratingView.starWidth = 20.0f;
-
-// set star image
-ratingView.fullImage = @"ic_starwhite.png";
-ratingView.halfImage = @"ic_starwhitehalf.png";
-ratingView.emptyImage = @"ic_starwhiteept";
+StarRatingViewConfiguration *conf = [[StarRatingViewConfiguration alloc] init];
+conf.rateEnabled = YES;
+conf.starWidth = 40.0f;
+conf.fullImage = @"ic_starwhite.png";
+conf.halfImage = @"ic_starwhitehalf.png";
+conf.emptyImage = @"ic_starwhiteept";
 ```
 
 

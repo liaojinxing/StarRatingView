@@ -8,17 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StarRatingView : UIView
-
-- (id)initWithFrame:(CGRect)frame rateEnabled:(BOOL)rateEnabled;
+@interface StarRatingViewConfiguration : NSObject
 
 // star configuration
 @property (nonatomic, assign) CGFloat starWidth;
-@property (nonatomic, assign) BOOL rateEnabled;
+@property (nonatomic, assign) BOOL rateEnabled; // default is YES
 
-// star image
-@property (nonatomic, strong) NSString *fullImage;
-@property (nonatomic, strong) NSString *halfImage;
-@property (nonatomic, strong) NSString *emptyImage;
+// star image, these should not be nil
+@property (nonatomic, strong, nonnull) NSString *fullImage;
+@property (nonatomic, strong, nonnull) NSString *halfImage;
+@property (nonatomic, strong, nonnull) NSString *emptyImage;
+
+@end
+
+typedef void (^StarRatingViewAction)();
+
+@interface StarRatingView : UIView
+
+- (nullable instancetype)initWithFrame:(CGRect)frame configuration:(nonnull StarRatingViewConfiguration *)configuration;
+
+// rating
 @property (nonatomic, assign) CGFloat rating;
+- (void)setRating:(CGFloat)rating completion:(nullable StarRatingViewAction)completion;
+
 @end

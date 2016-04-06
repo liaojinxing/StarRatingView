@@ -8,98 +8,66 @@
 
 #import "StarRatingView.h"
 
-static const CGFloat kDefaultStarWidth = 16.0f;
-
 @interface StarRatingView ()
 
 @property (nonatomic, strong) NSMutableArray *starButtons;
+@property (nonatomic, copy) StarRatingViewAction ratingAction;
+@property (nonatomic, strong) StarRatingViewConfiguration *configuration;
+
+@end
+
+@implementation StarRatingViewConfiguration
 
 @end
 
 
 @implementation StarRatingView
 
-- (id)initWithFrame:(CGRect)frame
-{
-  return [self initWithFrame:frame rateEnabled:NO];
-}
+- (nullable instancetype)initWithFrame:(CGRect)frame configuration:(nonnull StarRatingViewConfiguration *)configuration {
+  if (!configuration.fullImage || !configuration.emptyImage || !configuration.halfImage) {
+    return nil;
+  }
 
-- (id)initWithFrame:(CGRect)frame rateEnabled:(BOOL)rateEnabled
-{
   self = [super initWithFrame:frame];
   if (self) {
     _starButtons = [[NSMutableArray alloc] initWithCapacity:5];
     for (int i = 0; i < 5; i++) {
       UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-      [button setFrame:frame];
+      CGFloat starWidth = configuration.starWidth? configuration.starWidth: 16;
+      [button setFrame:CGRectMake(starWidth * i, 0, starWidth, starWidth)];
       [button setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
       button.tag = i;
+      [button setUserInteractionEnabled:configuration.rateEnabled];
+      if (configuration.rateEnabled) {
+        [button  addTarget:self action:@selector(rate:) forControlEvents:UIControlEventTouchUpInside];
+      }
       [self addSubview:button];
       [_starButtons addObject:button];
     }
 
-    self.starWidth = kDefaultStarWidth;
-    self.rateEnabled = rateEnabled;
+    self.configuration = configuration;
   }
   return self;
 }
 
-- (void)setStarWidth:(CGFloat)starWidth
-{
-  _starWidth = starWidth;
-  for (int i = 0; i < _starButtons.count; i++) {
-    UIButton *button = [_starButtons objectAtIndex:i];
-    [button setFrame:CGRectMake(self.starWidth * i,
-                                0,
-                                self.starWidth,
-                                self.starWidth)];
-  }
-}
-
-- (void)setRateEnabled:(BOOL)rateEnabled
-{
-  _rateEnabled = rateEnabled;
-  for (int i = 0; i < _starButtons.count; i++) {
-    UIButton *button = [_starButtons objectAtIndex:i];
-    [button setUserInteractionEnabled:_rateEnabled];
-    if (_rateEnabled) {
-      [button  addTarget:self
-                  action:@selector(rate:)
-        forControlEvents:UIControlEventTouchUpInside];
-    }
-  }
-}
-
-- (void)rate:(id)sender
-{
+- (void)rate:(id)sender {
   UIButton *button = (UIButton *)sender;
   [self setRating:button.tag + 1];
 }
 
-- (void)setRating:(CGFloat)rating
-{
-  _rating = rating;
+- (void)setRating:(CGFloat)rating completion:(nullable StarRatingViewAction)completion {
+    [self setRating:rating];
+    if (completion) {
+        completion();
+    }
+}
 
-  UIImage *starFull, *starHalf, *starEmpty;
+- (void)setRating:(CGFloat)rating {
+  UIImage *starFull = [UIImage imageNamed:self.configuration.fullImage];
+  UIImage *starHalf = [UIImage imageNamed:self.configuration.halfImage];
+  UIImage *starEmpty = [UIImage imageNamed:self.configuration.emptyImage];
 
-  if (self.fullImage) {
-    starFull = [UIImage imageNamed:self.fullImage];
-  } else {
-    starFull = [UIImage imageNamed:@"ic_starred.png"];
-  }
-
-  if (self.halfImage) {
-    starHalf = [UIImage imageNamed:self.halfImage];
-  } else {
-    starHalf = [UIImage imageNamed:@"ic_starredhalf.png"];
-  }
-
-  if (self.emptyImage) {
-    starEmpty = [UIImage imageNamed:self.emptyImage];
-  } else {
-    starEmpty = [UIImage imageNamed:@"ic_starredept.png"];
-  }
-
+  rating = round(rating * 2) / 2;
   int fullStars = floor(rating);
   int i;
   for (i = 0; i < fullStars; i++) {
