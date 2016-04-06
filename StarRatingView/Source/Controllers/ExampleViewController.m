@@ -19,17 +19,18 @@
 {
   [super viewDidLoad];
   [self.view setBackgroundColor:[UIColor grayColor]];
+
+  StarRatingViewConfiguration *conf = [[StarRatingViewConfiguration alloc] init];
+  conf.rateEnabled = YES;
+  conf.starWidth = 40.0f;
+  conf.fullImage = @"ic_starwhite.png";
+  conf.halfImage = @"ic_starwhitehalf.png";
+  conf.emptyImage = @"ic_starwhiteept";
+  StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 50, 50) configuration:conf];
   
-  StarRatingView *ratingView = [[StarRatingView alloc] initWithFrame:CGRectMake(50, 100, self.view.frame.size.width - 50, 20)];
-  ratingView.rateEnabled = YES;
-  ratingView.starWidth = 30.0f;
-  // set image
-  ratingView.fullImage = @"ic_starwhite.png";
-  ratingView.halfImage = @"ic_starwhitehalf.png";
-  ratingView.emptyImage = @"ic_starwhiteept";
-  
-  
-  ratingView.rating = 4.0f;
+  [ratingView setRating:4.25 completion:^{
+      NSLog(@"rate done");
+  }];
   [self.view addSubview:ratingView];
 }
 
