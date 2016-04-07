@@ -1,8 +1,6 @@
 StarRatingView
 ================
 
-[![Build Status](https://travis-ci.org/liaojinxing/StarRatingView.svg)](https://travis-ci.org/liaojinxing/StarRatingView)
-
 Star rating view, often used in vote. Easy to use, and flexible configurations.
 
 ![StarRating1](ScreenShot/rating1.png)
