@@ -63,6 +63,7 @@
 }
 
 - (void)setRating:(CGFloat)rating {
+  _rating = rating;
   UIImage *starFull = [UIImage imageNamed:self.configuration.fullImage];
   UIImage *starHalf = [UIImage imageNamed:self.configuration.halfImage];
   UIImage *starEmpty = [UIImage imageNamed:self.configuration.emptyImage];
