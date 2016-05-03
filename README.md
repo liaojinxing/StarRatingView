@@ -37,3 +37,11 @@ conf.emptyImage = @"ic_starwhiteept";
 License
 ------
 StarRatingView is available under the MIT license. See the LICENSE file for more info.
+
+Subscription
+-------
+欢迎关注[简书]，关注微信公众号(iOSers)，订阅高质量原创技术文章：
+
+<img src="http://upload-images.jianshu.io/upload_images/1859836-2f44998e2341e34d.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="公众号" width="300px" hspace="10"/>
+
+[简书]:http://www.jianshu.com/users/25481f0294aa/latest_articles
